@@ -1,7 +1,7 @@
 databaseChangeLog:
   - changeSet:
       id: V0.1.0-001-create-complaints-table
-      author: wnuka'
+      author: wnuka
       changes:
         - createTable:
             tableName: complaints

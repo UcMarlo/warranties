@@ -6,8 +6,8 @@ import org.apache.commons.lang3.NotImplementedException;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.stereotype.Service;
 
-@Service
-@ConditionalOnProperty(name = "infra.geolocation.enabled:true", havingValue = "false")
+@Service("IpGeolocationService")
+@ConditionalOnProperty(name = "infra.geolocation.enabled", havingValue = "true")
 public class IpGeolocationAdapter implements IpGeolocationPort {
     @Override
     public GeolocationData findCountryByIP(String ip) {

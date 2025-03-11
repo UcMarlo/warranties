@@ -1,6 +1,23 @@
 spring:
   application:
     name: warranties
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/warranties
+    username: user
+    password: secret
+    hikari:
+      maximum-pool-size: 10
+      minimum-idle: 5
+      connection-timeout: 30000
+  jpa:
+    database: POSTGRESQL
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    properties:
+      hibernate:
+        temp.use_jdbc_metadata_defaults: false
+        jdbc.lob.non_contextual_creation: true
+        namingStrategy: org.hibernate.cfg.ImprovedNamingStrategy
 
 infra:
   geolocation:

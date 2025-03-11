@@ -17,7 +17,7 @@ import java.util.Optional;
 @RequiredArgsConstructor
 public class ComplaintService {
     private final ComplaintRepository complaintRepository;
-    private final IpGeolocationPort ipGeolocationPort;
+    private final IpGeolocationPort IpGeolocationService;
 
     @Transactional
     public ComplaintId registerNewComplaint(CreateNewComplaintCommand command) {
@@ -31,7 +31,7 @@ public class ComplaintService {
             complaint.incrementReportCount();
             return complaint.getId();
         }
-        String country = ipGeolocationPort.findCountryByIP(command.getCreatedFromIp()).getCountry();
+        String country = IpGeolocationService.findCountryByIP(command.getCreatedFromIp()).getCountry();
 
         Complaint complaint = new Complaint(
                 command.getProductId(),

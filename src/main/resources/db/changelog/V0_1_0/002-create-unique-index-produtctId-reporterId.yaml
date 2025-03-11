@@ -5,5 +5,5 @@ databaseChangeLog:
         changes:
           - addUniqueConstraint:
                 tableName: complaints
-                columnNames: product_id, reporter
+                columnNames: product_id, reporter_id
                 constraintName: uq_product_reporter

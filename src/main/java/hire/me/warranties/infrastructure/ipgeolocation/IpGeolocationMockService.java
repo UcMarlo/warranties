@@ -4,9 +4,11 @@ import hire.me.warranties.domain.geolocation.GeolocationData;
 import hire.me.warranties.domain.geolocation.IpGeolocationPort;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
+import org.springframework.stereotype.Service;
 
 @Slf4j
-@ConditionalOnProperty(name = "infra.geolocation.enabled:true", havingValue = "false")
+@Service("IpGeolocationService")
+@ConditionalOnProperty(name = "infra.geolocation.enabled", havingValue = "false")
 public class IpGeolocationMockService implements IpGeolocationPort {
     @Override
     public GeolocationData findCountryByIP(String ip) {

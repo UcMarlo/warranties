@@ -1,6 +1,6 @@
 databaseChangeLog:
   - include:
-      file: '001-create-complaints-table.yaml'
+      file: 'db/changelog/V0_1_0/001-create-complaints-table.yaml'
 
   - include:
-      file: '002-create-unique-index-produtctId-reporterId.yaml'
+      file: 'db/changelog/V0_1_0/002-create-unique-index-produtctId-reporterId.yaml'
