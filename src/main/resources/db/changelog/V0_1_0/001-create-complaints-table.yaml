@@ -1,0 +1,44 @@
+databaseChangeLog:
+  - changeSet:
+      id: V0.1.0-001-create-complaints-table
+      author: wnuka'
+      changes:
+        - createTable:
+            tableName: complaints
+            columns:
+              - column:
+                  name: id
+                  type: UUID
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: product_id
+                  type: UUID
+                  constraints:
+                    nullable: false
+              - column:
+                  name: content
+                  type: TEXT
+                  constraints:
+                    nullable: false
+              - column:
+                  name: creation_date
+                  type: TIMESTAMP
+                  constraints:
+                    nullable: false
+              - column:
+                  name: reporter_id
+                  type: UUID
+                  constraints:
+                    nullable: false
+              - column:
+                  name: country
+                  type: VARCHAR(50)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: report_count
+                  type: INT
+                  constraints:
+                    nullable: false

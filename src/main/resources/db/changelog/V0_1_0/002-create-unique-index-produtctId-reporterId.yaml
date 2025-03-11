@@ -1,0 +1,9 @@
+databaseChangeLog:
+    - changeSet:
+        author: wnuka
+        id: V0.1.0-002-create-unique-index-product-reporter
+        changes:
+          - addUniqueConstraint:
+                tableName: complaints
+                columnNames: product_id, reporter
+                constraintName: uq_product_reporter
