@@ -18,6 +18,7 @@ import java.util.Objects;
 @NoArgsConstructor
 public class Complaint {
     @EmbeddedId
+    @AttributeOverride(name = "value", column = @Column(name = "id", nullable = false))
     private ComplaintId id;
 
     @Embedded

@@ -2,13 +2,18 @@ package hire.me.warranties.domain.complaint;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Embeddable;
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Value;
 
 @Embeddable
-@Value
+@Getter
+@NoArgsConstructor
+@EqualsAndHashCode
 public class ComplaintContent {
     @Column(nullable = false, length = 4000)
-    String value;
+    private String value;
 
     public ComplaintContent(String value) {
         if (value == null || value.isBlank()) {

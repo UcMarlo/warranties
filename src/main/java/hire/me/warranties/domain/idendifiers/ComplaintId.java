@@ -1,12 +1,14 @@
 package hire.me.warranties.domain.idendifiers;
 
 import jakarta.persistence.Embeddable;
-import lombok.Value;
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
 
 import java.util.UUID;
 
 @Embeddable
-@Value
+@Getter
+@EqualsAndHashCode
 public class ComplaintId {
     private final UUID value;
 

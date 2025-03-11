@@ -1,14 +1,18 @@
 package hire.me.warranties.domain.idendifiers;
 
 import jakarta.persistence.Embeddable;
-import lombok.Value;
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
 
 import java.util.UUID;
 
 @Embeddable
-@Value
+@Getter
+@NoArgsConstructor
+@EqualsAndHashCode
 public class UserId {
-    private final UUID value;
+    private UUID value;
 
     public UserId(String value) {
         this.value = UUID.fromString(value);

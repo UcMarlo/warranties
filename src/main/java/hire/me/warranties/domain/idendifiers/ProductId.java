@@ -6,9 +6,11 @@ import lombok.*;
 import java.util.UUID;
 
 @Embeddable
-@Value
+@Getter
+@NoArgsConstructor
+@EqualsAndHashCode
 public class ProductId {
-    private final UUID value;
+    private UUID value;
 
     public ProductId(String value) {
         this.value = UUID.fromString(value);
