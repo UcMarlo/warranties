@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: warranties
+
+infra:
+  geolocation:
+    enabled: false # when geolocation is disabled by default it returns mocked value
