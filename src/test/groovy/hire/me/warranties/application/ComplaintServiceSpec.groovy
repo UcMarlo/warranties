@@ -87,4 +87,36 @@ class ComplaintServiceSpec extends Specification {
         1 * complaintRepository.findById(complaintId) >> Optional.of(existingComplaint)
         complaint == existingComplaint
     }
+
+    def "should update complaint content when valid id and content are provided"() {
+        given:
+        def complaintId = new ComplaintId("1e603af2-c005-45dd-bbc0-514923a5669b")
+        def existingComplaint = Mock(Complaint)
+        def newContent = "Updated complaint content"
+
+        when:
+        complaintService.updateComplaint(complaintId, newContent)
+
+        then:
+        1 * complaintRepository.findById(complaintId) >> Optional.of(existingComplaint)
+        1 * existingComplaint.updateCompliant({ it.value == newContent })
+    }
+
+    def "should throw ComplaintNotFoundException when complaint is not found"() {
+        given:
+        def complaintId = new ComplaintId("1e603af2-c005-45dd-bbc0-514923a5669b")
+
+        and:
+        complaintRepository.findById(complaintId) >> Optional.empty()
+
+        when:
+        complaintService.updateComplaint(
+                complaintId,
+                "My dog chewed the product, and now it's beyond repair, can I ask for a refund?"
+        )
+
+        then:
+        def e = thrown(ComplaintNotFoundException)
+        e.message == "Complaint with ID: 1e603af2-c005-45dd-bbc0-514923a5669b cannot be found"
+    }
 }

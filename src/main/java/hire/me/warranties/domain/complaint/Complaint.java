@@ -57,6 +57,10 @@ public class Complaint {
         this.reportCount = 1;
     }
 
+    public void updateCompliant(ComplaintContent content){
+        this.content = content;
+    }
+
     public void incrementReportCount() {
         this.reportCount++;
     }

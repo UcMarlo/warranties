@@ -49,4 +49,10 @@ public class ComplaintService {
         return complaintRepository.findById(complaintId)
                 .orElseThrow(() -> new ComplaintNotFoundException("Complaint with ID: " + complaintId.getValue() + " cannot be found"));
     }
+
+    @Transactional
+    public void updateComplaint(ComplaintId complaintId, String content) {
+        Complaint complaintToUpdate = findCompliantByComplaintId(complaintId);
+        complaintToUpdate.updateCompliant(new ComplaintContent(content));
+    }
 }

@@ -99,4 +99,28 @@ class ComplaintSpec extends Specification {
         def e = thrown(IllegalArgumentException)
         e.message == "Country cannot be null"
     }
+
+    def "should update complaint content"() {
+        given:
+        def productId = new ProductId("1e603af2-c005-45dd-bbc0-514923a5669b")
+        def reporterId = new UserId("6173a5e0-a63d-4328-b9fd-e9b72c1cd443")
+        def country = "poland"
+        def oldComplaintContent = new ComplaintContent("The product is defective")
+        def newComplaintContent = new ComplaintContent("I'm losing my patience because the product is not working.")
+        def complainToUpdate = new Complaint(productId, oldComplaintContent, reporterId, country)
+
+        when:
+        complainToUpdate.updateCompliant(newComplaintContent)
+
+        then:
+        complainToUpdate.content != oldComplaintContent
+        complainToUpdate.content == newComplaintContent
+        complainToUpdate.id != null
+        complainToUpdate.productId == productId
+        complainToUpdate.productId == productId
+        complainToUpdate.creationDate != null
+        complainToUpdate.reporterId == reporterId
+        complainToUpdate.country == country
+        complainToUpdate.reportCount == 1
+    }
 }
