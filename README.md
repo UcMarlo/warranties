@@ -1,7 +1,20 @@
 # Warranties Application
+A simple application for adding and managing warranty claims.
 ## Tech Stack
+- Java 21
+- Docker
+- PostgresSQL
 
 ## How to run the application
+### Prerequisites:
+- Docker Desktop or equivalent
+- JDK 21
+### Instructions
+1. build the dockerized application using google-jib ```./gradlew jibDockerBuild```
+   1. it should create a docker image.
+2. paste your ipgeolocation apikey in `docker-compose.yaml` under `IPGEOLOCATION_API_KEY`
+   1. if you're not planning to use the api simply set `IPGEOLOCATION_ENABLED` false to enable mock.
+3. run ```docker-compose up -d```
 
 ## Api Documentation
 

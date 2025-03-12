@@ -3,9 +3,9 @@ spring:
     name: warranties
   datasource:
     driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://localhost:5432/warranties
-    username: user
-    password: secret
+    url: ${DATABASE_URL}
+    username: ${DATABASE_USERNAME}
+    password: ${DATABASE_PASSWORD}
     hikari:
       maximum-pool-size: 10
       minimum-idle: 5
