@@ -1,4 +1,4 @@
-package hire.me.warranties.application.api.dto;
+package hire.me.warranties.application.api.dto.request;
 
 import lombok.Data;
 

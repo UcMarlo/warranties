@@ -1,4 +1,4 @@
-package hire.me.warranties.application.api.dto;
+package hire.me.warranties.application.api.dto.request;
 
 import hire.me.warranties.domain.complaint.command.CreateNewComplaintCommand;
 import hire.me.warranties.domain.complaint.idendifiers.ProductId;

@@ -1,4 +1,4 @@
-package hire.me.warranties.application.api.dto;
+package hire.me.warranties.application.api.dto.response;
 
 import hire.me.warranties.domain.complaint.idendifiers.ComplaintId;
 import lombok.AllArgsConstructor;

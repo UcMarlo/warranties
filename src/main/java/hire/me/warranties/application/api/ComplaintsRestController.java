@@ -1,11 +1,14 @@
 package hire.me.warranties.application.api;
 
+import hire.me.warranties.application.api.dto.request.CreateComplaintRequest;
+import hire.me.warranties.application.api.dto.request.UpdateComplaintContentRequest;
+import hire.me.warranties.application.api.dto.response.ComplaintMetadataResponse;
+import hire.me.warranties.application.api.dto.response.CompliantDetailsResponse;
+import hire.me.warranties.application.api.dto.response.CreateComplaintResponse;
 import hire.me.warranties.application.service.ComplaintService;
-import hire.me.warranties.application.api.dto.CompliantDetailsResponse;
-import hire.me.warranties.application.api.dto.CreateComplaintRequest;
-import hire.me.warranties.application.api.dto.CreateComplaintResponse;
-import hire.me.warranties.application.api.dto.UpdateComplaintContentRequest;
 import hire.me.warranties.domain.complaint.idendifiers.ComplaintId;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -30,6 +33,12 @@ public class ComplaintsRestController {
         ));
     }
 
+    @GetMapping("/list")
+    public ResponseEntity<Page<ComplaintMetadataResponse>> getComplaints(Pageable pageable) {
+        return ResponseEntity.ok(complaintService.getAllComplaints(pageable)
+                .map(ComplaintMetadataResponse::toComplaintMetadataResponse));
+    }
+
     @PutMapping("/{id}")
     public ResponseEntity<Void> updateComplaint(@PathVariable String id, @RequestBody UpdateComplaintContentRequest updateComplaintContentRequest) {
         complaintService.updateComplaint(
@@ -39,5 +48,4 @@ public class ComplaintsRestController {
         return ResponseEntity.noContent().build();
     }
 
-    //TODO: pageable list of complaints with searching by userId
 }

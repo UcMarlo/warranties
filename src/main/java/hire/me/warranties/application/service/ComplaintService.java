@@ -9,6 +9,8 @@ import hire.me.warranties.domain.geolocation.IpGeolocationPort;
 import hire.me.warranties.domain.complaint.idendifiers.ComplaintId;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;
@@ -54,5 +56,9 @@ public class ComplaintService {
     public void updateComplaint(ComplaintId complaintId, String content) {
         Complaint complaintToUpdate = findCompliantByComplaintId(complaintId);
         complaintToUpdate.updateCompliant(new ComplaintContent(content));
+    }
+
+    public Page<Complaint> getAllComplaints(Pageable pageable) {
+        return complaintRepository.findAll(pageable);
     }
 }
