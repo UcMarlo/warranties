@@ -17,6 +17,8 @@ A simple application for adding and managing warranty claims.
 3. run ```docker-compose up -d```
 
 ## Api Documentation
+Swagger is available under:
+http://localhost:8080/swagger-ui/index.html
 
 ## Original contents of the task
 ### Zadanie rekrutacyjne backend
