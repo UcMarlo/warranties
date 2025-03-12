@@ -1,14 +1,14 @@
 package hire.me.warranties.application
 
-import hire.me.warranties.domain.command.CreateNewComplaintCommand
+import hire.me.warranties.domain.complaint.command.CreateNewComplaintCommand
 import hire.me.warranties.domain.complaint.Complaint
 import hire.me.warranties.domain.complaint.ComplaintRepository
 import hire.me.warranties.domain.geolocation.GeolocationData
 import hire.me.warranties.domain.geolocation.IpGeolocationPort
-import hire.me.warranties.domain.idendifiers.ComplaintId
-import hire.me.warranties.domain.idendifiers.ProductId
-import hire.me.warranties.domain.exception.ComplaintNotFoundException
-import hire.me.warranties.domain.idendifiers.UserId
+import hire.me.warranties.domain.complaint.idendifiers.ComplaintId
+import hire.me.warranties.domain.complaint.idendifiers.ProductId
+import hire.me.warranties.domain.complaint.exception.ComplaintNotFoundException
+import hire.me.warranties.domain.complaint.idendifiers.UserId
 import spock.lang.Specification
 import spock.lang.Subject
 

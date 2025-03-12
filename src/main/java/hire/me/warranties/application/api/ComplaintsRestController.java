@@ -5,7 +5,7 @@ import hire.me.warranties.application.api.dto.CompliantDetailsResponse;
 import hire.me.warranties.application.api.dto.CreateComplaintRequest;
 import hire.me.warranties.application.api.dto.CreateComplaintResponse;
 import hire.me.warranties.application.api.dto.UpdateComplaintContentRequest;
-import hire.me.warranties.domain.idendifiers.ComplaintId;
+import hire.me.warranties.domain.complaint.idendifiers.ComplaintId;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

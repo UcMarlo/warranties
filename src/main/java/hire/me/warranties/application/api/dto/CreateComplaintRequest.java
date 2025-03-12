@@ -1,8 +1,8 @@
 package hire.me.warranties.application.api.dto;
 
-import hire.me.warranties.domain.command.CreateNewComplaintCommand;
-import hire.me.warranties.domain.idendifiers.ProductId;
-import hire.me.warranties.domain.idendifiers.UserId;
+import hire.me.warranties.domain.complaint.command.CreateNewComplaintCommand;
+import hire.me.warranties.domain.complaint.idendifiers.ProductId;
+import hire.me.warranties.domain.complaint.idendifiers.UserId;
 import lombok.Data;
 
 @Data

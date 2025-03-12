@@ -1,6 +1,6 @@
 package hire.me.warranties.application.api.dto;
 
-import hire.me.warranties.domain.idendifiers.ComplaintId;
+import hire.me.warranties.domain.complaint.idendifiers.ComplaintId;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 

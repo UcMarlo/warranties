@@ -1,12 +1,12 @@
 package hire.me.warranties.application;
 
-import hire.me.warranties.domain.command.CreateNewComplaintCommand;
+import hire.me.warranties.domain.complaint.command.CreateNewComplaintCommand;
 import hire.me.warranties.domain.complaint.Complaint;
 import hire.me.warranties.domain.complaint.ComplaintContent;
 import hire.me.warranties.domain.complaint.ComplaintRepository;
-import hire.me.warranties.domain.exception.ComplaintNotFoundException;
+import hire.me.warranties.domain.complaint.exception.ComplaintNotFoundException;
 import hire.me.warranties.domain.geolocation.IpGeolocationPort;
-import hire.me.warranties.domain.idendifiers.ComplaintId;
+import hire.me.warranties.domain.complaint.idendifiers.ComplaintId;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;

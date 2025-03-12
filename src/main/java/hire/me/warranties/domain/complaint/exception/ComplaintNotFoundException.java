@@ -1,4 +1,4 @@
-package hire.me.warranties.domain.exception;
+package hire.me.warranties.domain.complaint.exception;
 
 public class ComplaintNotFoundException extends RuntimeException {
     public ComplaintNotFoundException(String message){

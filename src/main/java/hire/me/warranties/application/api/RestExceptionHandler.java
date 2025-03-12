@@ -1,6 +1,6 @@
 package hire.me.warranties.application.api;
 
-import hire.me.warranties.domain.exception.ComplaintNotFoundException;
+import hire.me.warranties.domain.complaint.exception.ComplaintNotFoundException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

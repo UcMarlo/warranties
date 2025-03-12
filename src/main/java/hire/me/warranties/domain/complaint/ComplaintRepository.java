@@ -1,8 +1,8 @@
 package hire.me.warranties.domain.complaint;
 
-import hire.me.warranties.domain.idendifiers.ComplaintId;
-import hire.me.warranties.domain.idendifiers.ProductId;
-import hire.me.warranties.domain.idendifiers.UserId;
+import hire.me.warranties.domain.complaint.idendifiers.ComplaintId;
+import hire.me.warranties.domain.complaint.idendifiers.ProductId;
+import hire.me.warranties.domain.complaint.idendifiers.UserId;
 import org.springframework.data.repository.CrudRepository;
 
 import java.util.Optional;

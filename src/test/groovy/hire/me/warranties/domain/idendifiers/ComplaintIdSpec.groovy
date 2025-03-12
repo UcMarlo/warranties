@@ -1,5 +1,6 @@
 package hire.me.warranties.domain.idendifiers
 
+import hire.me.warranties.domain.complaint.idendifiers.ComplaintId
 import spock.lang.Specification
 
 

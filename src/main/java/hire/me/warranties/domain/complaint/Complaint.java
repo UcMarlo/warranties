@@ -1,15 +1,14 @@
 package hire.me.warranties.domain.complaint;
 
-import hire.me.warranties.domain.idendifiers.ComplaintId;
-import hire.me.warranties.domain.idendifiers.ProductId;
-import hire.me.warranties.domain.idendifiers.UserId;
+import hire.me.warranties.domain.complaint.idendifiers.ComplaintId;
+import hire.me.warranties.domain.complaint.idendifiers.ProductId;
+import hire.me.warranties.domain.complaint.idendifiers.UserId;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
 import java.time.ZonedDateTime;
-import java.util.Objects;
 
 @Entity
 @Table(name = "complaints")

@@ -2,8 +2,8 @@ package hire.me.warranties.domain
 
 import hire.me.warranties.domain.complaint.Complaint
 import hire.me.warranties.domain.complaint.ComplaintContent
-import hire.me.warranties.domain.idendifiers.ProductId
-import hire.me.warranties.domain.idendifiers.UserId
+import hire.me.warranties.domain.complaint.idendifiers.ProductId
+import hire.me.warranties.domain.complaint.idendifiers.UserId
 import spock.lang.Specification
 
 
