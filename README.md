@@ -5,10 +5,14 @@ A simple application for adding and managing warranty claims.
 - Docker
 - PostgresSQL
 
+## External dependencies
+- [IpGeolocation API - documentation](https://ipgeolocation.io/documentation.html) 
+
 ## How to run the application
 ### Prerequisites:
 - Docker Desktop or equivalent
 - JDK 21
+
 ### Instructions
 1. build the dockerized application using google-jib ```./gradlew jibDockerBuild```
    1. it should create a docker image.
@@ -18,7 +22,7 @@ A simple application for adding and managing warranty claims.
 
 ## Api Documentation
 Swagger is available under:
-http://localhost:8080/swagger-ui/index.html
+[link](http://localhost:8080/swagger-ui/index.html)
 
 ## Original contents of the task
 ### Zadanie rekrutacyjne backend
