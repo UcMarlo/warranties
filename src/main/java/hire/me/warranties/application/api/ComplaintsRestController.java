@@ -1,6 +1,6 @@
 package hire.me.warranties.application.api;
 
-import hire.me.warranties.application.ComplaintService;
+import hire.me.warranties.application.service.ComplaintService;
 import hire.me.warranties.application.api.dto.CompliantDetailsResponse;
 import hire.me.warranties.application.api.dto.CreateComplaintRequest;
 import hire.me.warranties.application.api.dto.CreateComplaintResponse;

@@ -1,4 +1,4 @@
-package hire.me.warranties.application;
+package hire.me.warranties.application.service;
 
 import hire.me.warranties.domain.complaint.command.CreateNewComplaintCommand;
 import hire.me.warranties.domain.complaint.Complaint;
