@@ -35,7 +35,7 @@ class ComplaintServiceSpec extends Specification {
 
         then:
         1 * complaintRepository.findByProductIdAndReporterId(command.getProductId(), command.getUserId()) >> Optional.empty()
-        1 * ipGeolocationPort.findCountryByIP("192.168.1.1") >> new GeolocationData(country)
+        1 * ipGeolocationPort.getGeolocationDataByIp("192.168.1.1") >> new GeolocationData(country)
         1 * complaintRepository.save(_)
 
         complaintId != null

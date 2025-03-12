@@ -11,7 +11,7 @@ import org.springframework.stereotype.Service;
 @ConditionalOnProperty(name = "infra.geolocation.enabled", havingValue = "false")
 public class IpGeolocationMockService implements IpGeolocationPort {
     @Override
-    public GeolocationData findCountryByIP(String ip) {
+    public GeolocationData getGeolocationDataByIp(String ip) {
         log.warn("Geolocation mock is enabled - returning the default value");
         return new GeolocationData("Poland");
     }

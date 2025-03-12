@@ -31,7 +31,7 @@ public class ComplaintService {
             complaint.incrementReportCount();
             return complaint.getId();
         }
-        String country = IpGeolocationService.findCountryByIP(command.getCreatedFromIp()).getCountry();
+        String country = IpGeolocationService.getGeolocationDataByIp(command.getCreatedFromIp()).getCountry();
 
         Complaint complaint = new Complaint(
                 command.getProductId(),

@@ -21,7 +21,7 @@ spring:
 
 infra:
   geolocation:
-    enabled: ${IPGEOLOCATION_ENABLED} # when geolocation is disabled by default it returns mocked value
+    enabled: true # when geolocation is disabled by default it returns mocked value
     api:
       key: ${IPGEOLOCATION_API_KEY}
-      url: ${IPGEOLOCATION_API_URL}
+      url: 'https://api.ipgeolocation.io/ipgeo'
